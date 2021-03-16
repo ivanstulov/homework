@@ -1,0 +1,30 @@
+name: flutter_application_1
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^0.19.3
+  cupertino_icons: ^1.0.2
+  carousel_slider:
+    git: https://github.com/serenader2014/flutter_carousel_slider
+    ref: master
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  assets: 
+    - assets/
+    - assets/images/
+    - assets/images/example.svg
+
