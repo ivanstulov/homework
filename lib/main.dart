@@ -1,5 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:import_sorter/args.dart';
+import 'package:import_sorter/files.dart';
+import 'package:import_sorter/sort.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
@@ -51,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
             CarouselSlider(
-              options: CarouselOptions(height: 400.0),
+              options: CarouselOptions(height: 200.0),
               items: [1, 2, 3, 4, 5].map((i) {
                 return Builder(
                   builder: (BuildContext context) {
