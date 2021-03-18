@@ -22,6 +22,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  carousel_slider:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "07b2051cdb6b96cabe481227cbb0fafbf7e63a41"
+      url: "https://github.com/serenader2014/flutter_carousel_slider"
+    source: git
+    version: "3.0.0"
   characters:
     dependency: transitive
     description:

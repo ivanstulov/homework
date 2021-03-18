@@ -2,12 +2,14 @@
 import 'package:flutter/material.dart';
 
 // Package imports:
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:import_sorter/args.dart';
 import 'package:import_sorter/files.dart';
 import 'package:import_sorter/sort.dart';
 
-import 'package:carousel_slider/carousel_slider.dart';
+// Project imports:
+import 'package:flutter_application_1/home_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Example'),
+      home: MyHomePage(title: 'Im happy'),
     );
   }
 }
@@ -35,6 +37,8 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+int _counter = 0;
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -46,18 +50,27 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            //_counter % 2 == 0
+            HomeView(
+              counter: _counter,
+            ),
+            // : Container(),
+            ElevatedButton(
+                child: Text('Increment $_counter'),
+                onPressed: () {
+                  setState(() {
+                    _counter = _counter + 1;
+                  });
+                })
+
+            /*Text(
               'Image exercise:',
               style: TextStyle(fontSize: 20, height: null),
-            ),
-            //final assetName = 'assets/image.svg';
-            //final Widget svg = SvgPicture.asset(assetName);
-            SvgPicture.asset(
-              'assets/images/example.svg',
-              height: 150.0,
-            ),
+            ),*/
 
-            CarouselSlider(
+            //SvgPicture.asset('assets/images/example.svg',height: 150.0,),
+
+            /*CarouselSlider(
               options: CarouselOptions(height: 200.0),
               items: [1, 2, 3, 4, 5].map((i) {
                 return Builder(
@@ -73,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 );
               }).toList(),
-            )
+            )*/
             //Image.asset('assets/images/1.jpg'),
             //Image.network('https://img.fonwall.ru/o/2p/canada-moraine-lake-ozero-gory.jpg'),
           ],
